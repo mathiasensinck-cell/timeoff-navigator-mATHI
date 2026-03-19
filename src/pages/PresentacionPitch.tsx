@@ -189,7 +189,7 @@ const Slide3Negocio = () => (
         }}
       >
         <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
-          Un error aca no es un bug menor
+          Un error aca no es un problema menor
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Es friccion directa con el cliente en el modulo que mas lo retiene.
@@ -251,8 +251,8 @@ const Slide4Problema = () => (
         <Typography variant="body2" color="text.secondary">Acredita mensual</Typography>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(28, 163, 50, 0.08)', textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>Brasil</Typography>
-        <Typography variant="body2" color="text.secondary">Escala por faltas injustificadas</Typography>
+        <Typography variant="h6" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>Mexico</Typography>
+        <Typography variant="body2" color="text.secondary">Prima vacacional obligatoria</Typography>
       </Box>
     </Box>
     <Box sx={{ maxWidth: 800, display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
