@@ -480,7 +480,7 @@ const Slide5Impact = () => (
   </Box>
 );
 
-const slides = [Slide1Team, Slide2Problem, Slide3Solution, Slide4Demo, Slide5Impact];
+const slides = [Slide1Team, Slide2Problem, Slide3Solution, Slide5Impact, Slide4Demo];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
