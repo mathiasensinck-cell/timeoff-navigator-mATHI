@@ -9,10 +9,10 @@ import {
   ArrowBack as PrevIcon,
   ArrowForward as NextIcon,
   Circle as DotIcon,
-  TuneRounded as PolicyIcon,
-  ListAlt as LogIcon,
-  Assessment as ReportsIcon,
-  SmartToy as AiIcon,
+  Home as HomeIcon,
+  Science as LabIcon,
+  EventNote as EventLogIcon,
+  Chat as ChatIcon,
 } from '@mui/icons-material';
 
 const teamMembers = [
@@ -21,7 +21,7 @@ const teamMembers = [
     photo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/guille%20foto-JCAsCGuTEAMVRgRjPWDgjSQ56D46To.png',
   },
   {
-    name: 'Matías Ensinck',
+    name: 'Matias Ensinck',
     photo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mATHI%20FOTO-wYD0QUwJPOyZa7r9R1toK5EA4OSo9O.jpeg',
   },
   {
@@ -34,34 +34,8 @@ const teamMembers = [
   },
 ];
 
-const features = [
-  {
-    icon: <PolicyIcon sx={{ fontSize: 40 }} />,
-    title: 'Gestor de Políticas con IA',
-    description: 'Copiloto que guía paso a paso la creación y edición de políticas, explicando consecuencias antes de aplicar cambios.',
-    color: '#496BE3',
-  },
-  {
-    icon: <LogIcon sx={{ fontSize: 40 }} />,
-    title: 'Registro de Movimientos',
-    description: 'Línea del tiempo con todos los eventos de saldo de un empleado: acreditaciones, consumos y expiraciones.',
-    color: '#886BFF',
-  },
-  {
-    icon: <ReportsIcon sx={{ fontSize: 40 }} />,
-    title: 'Auditoría de Saldos',
-    description: 'Reportes descargables diferenciados por año y política, sin depender de Redash.',
-    color: '#F0B623',
-  },
-  {
-    icon: <AiIcon sx={{ fontSize: 40 }} />,
-    title: 'Agente Experto',
-    description: 'Chat con IA especializado en configuración, legislación laboral y buenas prácticas.',
-    color: '#E74444',
-  },
-];
-
-const Slide1Team = () => (
+// Slide 1: Apertura - El Gancho
+const Slide1Gancho = () => (
   <Box
     sx={{
       height: '100%',
@@ -69,9 +43,441 @@ const Slide1Team = () => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 6,
+      gap: 4,
+      px: 3,
     }}
   >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.5rem', md: '2.2rem' },
+        fontWeight: 500,
+        color: 'text.secondary',
+        textAlign: 'center',
+        maxWidth: 900,
+        lineHeight: 1.6,
+        fontStyle: 'italic',
+      }}
+    >
+      "Un admin de RRHH en Colombia acaba de configurar mal la politica de vacaciones. No lo sabe todavia. Lo va a descubrir en 3 meses, cuando 200 empleados tengan saldos incorrectos y el equipo de soporte este apagando incendios que se podrian haber evitado."
+    </Typography>
+    <Box
+      sx={{
+        mt: 4,
+        p: 4,
+        borderRadius: 3,
+        bgcolor: 'rgba(231, 68, 68, 0.08)',
+        border: '2px solid rgba(231, 68, 68, 0.3)',
+        maxWidth: 600,
+      }}
+    >
+      <Typography
+        variant="h4"
+        sx={{
+          fontWeight: 700,
+          color: '#E74444',
+          textAlign: 'center',
+        }}
+      >
+        Esto pasa. Pasa seguido. Y hoy no hay nada que lo prevenga.
+      </Typography>
+    </Box>
+  </Box>
+);
+
+// Slide 2: Por que importa para el negocio
+const Slide2Negocio = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.8rem', md: '2.5rem' },
+        fontWeight: 700,
+        color: '#496BE3',
+        textAlign: 'center',
+      }}
+    >
+      Por que esto importa para el negocio
+    </Typography>
+    <Box
+      sx={{
+        maxWidth: 800,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 3,
+      }}
+    >
+      <Box
+        sx={{
+          p: 3,
+          borderRadius: 3,
+          bgcolor: 'rgba(73, 107, 227, 0.08)',
+          borderLeft: '4px solid #496BE3',
+        }}
+      >
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          El modulo mas sticky de Humand
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Los clientes que usan vacaciones y permisos son los mas comprometidos con la plataforma. Les resuelve algo muy delicado: la gestion de vacaciones de sus colaboradores.
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          p: 3,
+          borderRadius: 3,
+          bgcolor: 'rgba(28, 163, 50, 0.08)',
+          borderLeft: '4px solid #1CA332',
+        }}
+      >
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          Mayor engagement = Menor churn
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          En un modelo SaaS, esto impacta directo en revenue.
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          p: 3,
+          borderRadius: 3,
+          bgcolor: 'rgba(231, 68, 68, 0.08)',
+          borderLeft: '4px solid #E74444',
+        }}
+      >
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          Un error aca no es un bug menor
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Es friccion directa con el cliente en el modulo que mas lo retiene.
+        </Typography>
+      </Box>
+    </Box>
+  </Box>
+);
+
+// Slide 3: El Problema
+const Slide3Problema = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.8rem', md: '2.5rem' },
+        fontWeight: 700,
+        color: '#E74444',
+        textAlign: 'center',
+      }}
+    >
+      El Problema
+    </Typography>
+    <Typography
+      variant="h5"
+      sx={{
+        color: 'text.secondary',
+        textAlign: 'center',
+        maxWidth: 700,
+        mb: 2,
+      }}
+    >
+      Configurarlo bien es complejo. Cada pais tiene reglas distintas.
+    </Typography>
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
+        gap: 3,
+        maxWidth: 900,
+      }}
+    >
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(73, 107, 227, 0.08)', textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, color: '#496BE3', mb: 1 }}>Argentina</Typography>
+        <Typography variant="body2" color="text.secondary">Maneja antiguedad</Typography>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(240, 182, 35, 0.08)', textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, color: '#F0B623', mb: 1 }}>Colombia</Typography>
+        <Typography variant="body2" color="text.secondary">Acredita mensual</Typography>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(28, 163, 50, 0.08)', textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>Brasil</Typography>
+        <Typography variant="body2" color="text.secondary">Escala por faltas injustificadas</Typography>
+      </Box>
+    </Box>
+    <Box sx={{ maxWidth: 800, display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
+      <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
+        Hoy, el admin no tiene guia de buenas practicas. No puede simular que va a pasar antes de aplicar. Y cuando algo falla, no hay forma simple de entender que paso.
+      </Typography>
+      <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 600, color: '#E74444' }}>
+        Admins con miedo de tocar la configuracion. Equipos de CX saturados. Implementaciones que se estiran.
+      </Typography>
+    </Box>
+  </Box>
+);
+
+// Slide 4: La Solucion
+const Slide4Solucion = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.8rem', md: '2.5rem' },
+        fontWeight: 700,
+        color: '#1CA332',
+        textAlign: 'center',
+      }}
+    >
+      La Solucion
+    </Typography>
+    <Typography
+      variant="h1"
+      sx={{
+        fontSize: { xs: '2.5rem', md: '4rem' },
+        fontWeight: 700,
+        background: 'linear-gradient(135deg, #496BE3 0%, #2DA8A4 100%)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        textAlign: 'center',
+      }}
+    >
+      TimeOff Navigator
+    </Typography>
+    <Box
+      sx={{
+        maxWidth: 800,
+        p: 4,
+        borderRadius: 3,
+        bgcolor: 'background.paper',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        textAlign: 'center',
+      }}
+    >
+      <Typography variant="h5" sx={{ color: 'text.primary', lineHeight: 1.6 }}>
+        Un <strong>copiloto de IA</strong> que permite a cualquier admin entender, configurar y auditar sus politicas de vacaciones — <strong>sin depender de soporte</strong>, y <strong>sin miedo a romper nada</strong>.
+      </Typography>
+    </Box>
+  </Box>
+);
+
+// Slide 5: Demo
+const Slide5Demo = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '2rem', md: '3rem' },
+        fontWeight: 700,
+        background: 'linear-gradient(135deg, #496BE3 0%, #2DA8A4 100%)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        textAlign: 'center',
+      }}
+    >
+      Demo en Vivo
+    </Typography>
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+        gap: 3,
+        maxWidth: 900,
+      }}
+    >
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(73, 107, 227, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+        <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(73, 107, 227, 0.15)' }}>
+          <HomeIcon sx={{ color: '#496BE3' }} />
+        </Box>
+        <Box>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Home</Typography>
+          <Typography variant="body2" color="text.secondary">Centro de control: politicas activas, empleados, acceso directo a cada herramienta.</Typography>
+        </Box>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(136, 107, 255, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+        <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(136, 107, 255, 0.15)' }}>
+          <LabIcon sx={{ color: '#886BFF' }} />
+        </Box>
+        <Box>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Laboratory</Typography>
+          <Typography variant="body2" color="text.secondary">Donde pasa la magia. Simulas primero, aplicas despues. El copiloto sugiere y explica por que.</Typography>
+        </Box>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(240, 182, 35, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+        <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(240, 182, 35, 0.15)' }}>
+          <EventLogIcon sx={{ color: '#F0B623' }} />
+        </Box>
+        <Box>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Event Log</Typography>
+          <Typography variant="body2" color="text.secondary">Linea del tiempo completa: acreditaciones, consumos, vencimientos. Todo trazable.</Typography>
+        </Box>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(231, 68, 68, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+        <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: 'rgba(231, 68, 68, 0.15)' }}>
+          <ChatIcon sx={{ color: '#E74444' }} />
+        </Box>
+        <Box>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Chat</Typography>
+          <Typography variant="body2" color="text.secondary">Agente de IA con toda la logica del modulo. Un experto de CX disponible 24/7.</Typography>
+        </Box>
+      </Box>
+    </Box>
+    <Box
+      component="a"
+      href="https://timeoff-navigator.vercel.app/login"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        mt: 3,
+        px: 4,
+        py: 2,
+        borderRadius: 2,
+        bgcolor: 'primary.main',
+        color: 'white',
+        textDecoration: 'none',
+        fontWeight: 600,
+        fontSize: '1.1rem',
+        boxShadow: '0 4px 20px rgba(73, 107, 227, 0.4)',
+        transition: 'all 0.2s ease',
+        '&:hover': {
+          bgcolor: 'primary.dark',
+          transform: 'translateY(-2px)',
+          boxShadow: '0 6px 25px rgba(73, 107, 227, 0.5)',
+        },
+      }}
+    >
+      Ir a la App
+    </Box>
+  </Box>
+);
+
+// Slide 6: El Impacto
+const Slide6Impacto = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.8rem', md: '2.5rem' },
+        fontWeight: 700,
+        background: 'linear-gradient(135deg, #1CA332 0%, #2DA8A4 100%)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        textAlign: 'center',
+      }}
+    >
+      El Impacto
+    </Typography>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 3,
+        maxWidth: 800,
+      }}
+    >
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(73, 107, 227, 0.08)', borderLeft: '4px solid #496BE3' }}>
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          Tiempo de implementacion comprimido
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Lo que hoy toma dias de ida y vuelta con CX, aca se hace en minutos. Mas clientes van a querer activar el modulo.
+        </Typography>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(28, 163, 50, 0.08)', borderLeft: '4px solid #1CA332' }}>
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          Equipo de CX liberado
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Las consultas repetitivas las absorbe el copiloto. El equipo humano se enfoca en lo que realmente necesita expertise.
+        </Typography>
+      </Box>
+      <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(240, 182, 35, 0.08)', borderLeft: '4px solid #F0B623' }}>
+        <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+          Friccion eliminada donde mas duele
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Simular antes de aplicar = cero errores inesperados. Menos tickets, menos urgencias, clientes mas felices.
+        </Typography>
+      </Box>
+    </Box>
+    <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'background.paper', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', maxWidth: 700, textAlign: 'center' }}>
+      <Typography variant="body1" sx={{ fontWeight: 600, color: 'text.primary' }}>
+        Implementaciones mas rapidas, mas clientes activando el modulo, menos churn. <br />
+        <span style={{ color: '#1CA332' }}>Una palanca directa de revenue para Humand.</span>
+      </Typography>
+    </Box>
+  </Box>
+);
+
+// Slide 7: Cierre y Equipo
+const Slide7Cierre = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 5,
+    }}
+  >
+    <Box sx={{ textAlign: 'center', maxWidth: 700 }}>
+      <Typography variant="h5" sx={{ color: 'text.secondary', mb: 2 }}>
+        Construimos esto en 2 dias con Claude Code, la API de Claude y React.
+      </Typography>
+      <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary' }}>
+        No es un mockup — es un producto funcional listo para el roadmap de Humand.
+      </Typography>
+    </Box>
     <Typography
       variant="h1"
       sx={{
@@ -111,8 +517,8 @@ const Slide1Team = () => (
             alt={member.name}
             crossOrigin="anonymous"
             sx={{
-              width: { xs: 120, md: 150 },
-              height: { xs: 120, md: 150 },
+              width: { xs: 100, md: 120 },
+              height: { xs: 100, md: 120 },
               borderRadius: '50%',
               objectFit: 'cover',
               border: '4px solid',
@@ -121,12 +527,12 @@ const Slide1Team = () => (
             }}
           />
           <Typography
-            variant="h4"
+            variant="body1"
             sx={{
               fontWeight: 500,
               textAlign: 'center',
               color: 'text.primary',
-              fontSize: { xs: '0.9rem', md: '1.1rem' },
+              fontSize: { xs: '0.85rem', md: '1rem' },
             }}
           >
             {member.name}
@@ -134,379 +540,20 @@ const Slide1Team = () => (
         </Box>
       ))}
     </Box>
-  </Box>
-);
-
-const Slide2Problem = () => (
-  <Box
-    sx={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 5,
-      px: 3,
-    }}
-  >
-    <Typography
-      variant="h2"
-      sx={{
-        fontSize: { xs: '2rem', md: '3rem' },
-        fontWeight: 700,
-        color: '#E74444',
-        textAlign: 'center',
-      }}
-    >
-      El Problema
-    </Typography>
-    <Box
-      sx={{
-        maxWidth: 800,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 4,
-      }}
-    >
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(231, 68, 68, 0.08)',
-          borderLeft: '4px solid #E74444',
-        }}
-      >
-        <Typography variant="h4" sx={{ mb: 1, fontWeight: 600, color: 'text.primary' }}>
-          Alta fricción en implementaciones
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          El módulo de TimeOff genera muchas requests de soporte porque las configuraciones iniciales son complejas y difíciles de entender.
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(240, 182, 35, 0.08)',
-          borderLeft: '4px solid #F0B623',
-        }}
-      >
-        <Typography variant="h4" sx={{ mb: 1, fontWeight: 600, color: 'text.primary' }}>
-          Falta de visibilidad
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Los administradores no pueden ver fácilmente el historial de movimientos ni entender por qué un empleado tiene cierto saldo.
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(136, 107, 255, 0.08)',
-          borderLeft: '4px solid #886BFF',
-        }}
-      >
-        <Typography variant="h4" sx={{ mb: 1, fontWeight: 600, color: 'text.primary' }}>
-          Riesgo al modificar políticas
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          No existe un entorno seguro para prever el impacto de cambiar una política activa antes de romper lo que ya está funcionando.
-        </Typography>
-      </Box>
-    </Box>
-  </Box>
-);
-
-const Slide3Solution = () => (
-  <Box
-    sx={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 4,
-      px: 3,
-    }}
-  >
-    <Typography
-      variant="h2"
-      sx={{
-        fontSize: { xs: '2rem', md: '3rem' },
-        fontWeight: 700,
-        color: '#1CA332',
-        textAlign: 'center',
-      }}
-    >
-      La Solución
-    </Typography>
-    <Typography
-      variant="h3"
-      sx={{
-        fontSize: { xs: '1.5rem', md: '2rem' },
-        fontWeight: 600,
-        background: 'linear-gradient(135deg, #496BE3 0%, #2DA8A4 100%)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        textAlign: 'center',
-        mb: 2,
-      }}
-    >
-      TimeOff Navigator
-    </Typography>
-    <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-        gap: 3,
-        maxWidth: 900,
-      }}
-    >
-      {features.map((feature) => (
-        <Box
-          key={feature.title}
-          sx={{
-            p: 3,
-            borderRadius: 3,
-            bgcolor: 'background.paper',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-            display: 'flex',
-            gap: 2,
-            alignItems: 'flex-start',
-            borderTop: `3px solid ${feature.color}`,
-          }}
-        >
-          <Box
-            sx={{
-              width: 56,
-              height: 56,
-              borderRadius: 2,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              bgcolor: `${feature.color}15`,
-              color: feature.color,
-              flexShrink: 0,
-            }}
-          >
-            {feature.icon}
-          </Box>
-          <Box>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 0.5 }}>
-              {feature.title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {feature.description}
-            </Typography>
-          </Box>
-        </Box>
-      ))}
-    </Box>
-  </Box>
-);
-
-const Slide4Demo = () => (
-  <Box
-    sx={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 4,
-      px: 3,
-    }}
-  >
-    <Typography
-      variant="h2"
-      sx={{
-        fontSize: { xs: '2.5rem', md: '4rem' },
-        fontWeight: 700,
-        background: 'linear-gradient(135deg, #496BE3 0%, #2DA8A4 100%)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        textAlign: 'center',
-      }}
-    >
-      Demo Time
-    </Typography>
     <Typography
       variant="h4"
       sx={{
-        color: 'text.secondary',
-        textAlign: 'center',
-        maxWidth: 600,
-      }}
-    >
-      Veamos TimeOff Navigator en accion
-    </Typography>
-    <Box
-      sx={{
-        mt: 2,
-        display: 'flex',
-        gap: 2,
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-      }}
-    >
-      {['Gestor de Politicas', 'Registro de Movimientos', 'Auditoria', 'Agente IA'].map((item, i) => (
-        <Box
-          key={item}
-          sx={{
-            px: 3,
-            py: 1.5,
-            borderRadius: 2,
-            bgcolor: [
-              'rgba(73, 107, 227, 0.1)',
-              'rgba(136, 107, 255, 0.1)',
-              'rgba(240, 182, 35, 0.1)',
-              'rgba(231, 68, 68, 0.1)',
-            ][i],
-            color: ['#496BE3', '#886BFF', '#F0B623', '#E74444'][i],
-            fontWeight: 600,
-          }}
-        >
-          {item}
-        </Box>
-      ))}
-    </Box>
-    <Box
-      component="a"
-      href="https://timeoff-navigator.vercel.app/login"
-      target="_blank"
-      rel="noopener noreferrer"
-      sx={{
-        mt: 4,
-        px: 4,
-        py: 2,
-        borderRadius: 2,
-        bgcolor: 'primary.main',
-        color: 'white',
-        textDecoration: 'none',
         fontWeight: 600,
-        fontSize: '1.1rem',
-        boxShadow: '0 4px 20px rgba(73, 107, 227, 0.4)',
-        transition: 'all 0.2s ease',
-        '&:hover': {
-          bgcolor: 'primary.dark',
-          transform: 'translateY(-2px)',
-          boxShadow: '0 6px 25px rgba(73, 107, 227, 0.5)',
-        },
-      }}
-    >
-      Ir a la App
-    </Box>
-  </Box>
-);
-
-const Slide5Impact = () => (
-  <Box
-    sx={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 5,
-      px: 3,
-    }}
-  >
-    <Typography
-      variant="h2"
-      sx={{
-        fontSize: { xs: '2rem', md: '3rem' },
-        fontWeight: 700,
-        background: 'linear-gradient(135deg, #1CA332 0%, #2DA8A4 100%)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        textAlign: 'center',
-      }}
-    >
-      Impacto Esperado
-    </Typography>
-    <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
-        gap: 4,
-        maxWidth: 1000,
-      }}
-    >
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(28, 163, 50, 0.08)',
-          textAlign: 'center',
-          border: '2px solid rgba(28, 163, 50, 0.2)',
-        }}
-      >
-        <Typography variant="h2" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>
-          -30%
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Reduccion en tickets de soporte relacionados a TimeOff
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(73, 107, 227, 0.08)',
-          textAlign: 'center',
-          border: '2px solid rgba(73, 107, 227, 0.2)',
-        }}
-      >
-        <Typography variant="h2" sx={{ fontWeight: 700, color: '#496BE3', mb: 1 }}>
-          +40%
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Autonomia de los clientes en configuracion de politicas
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          p: 4,
-          borderRadius: 3,
-          bgcolor: 'rgba(240, 182, 35, 0.08)',
-          textAlign: 'center',
-          border: '2px solid rgba(240, 182, 35, 0.2)',
-        }}
-      >
-        <Typography variant="h2" sx={{ fontWeight: 700, color: '#F0B623', mb: 1 }}>
-          2x
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Mas rapido el onboarding de nuevos clientes
-        </Typography>
-      </Box>
-    </Box>
-    <Box
-      sx={{
+        color: 'text.primary',
         mt: 2,
-        p: 3,
-        borderRadius: 3,
-        bgcolor: 'background.paper',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-        maxWidth: 700,
-        textAlign: 'center',
       }}
     >
-      <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: 'text.primary' }}>
-        Beneficio clave
-      </Typography>
-      <Typography variant="body1" color="text.secondary">
-        TimeOff Navigator empodera a los administradores de RRHH para gestionar licencias de forma autonoma, 
-        reduciendo la dependencia de soporte tecnico y mejorando la experiencia del usuario final.
-      </Typography>
-    </Box>
+      Gracias
+    </Typography>
   </Box>
 );
 
-const slides = [Slide1Team, Slide2Problem, Slide3Solution, Slide5Impact, Slide4Demo];
+const slides = [Slide1Gancho, Slide2Negocio, Slide3Problema, Slide4Solucion, Slide5Demo, Slide6Impacto, Slide7Cierre];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
