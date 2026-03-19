@@ -322,12 +322,42 @@ const Presentation = () => {
               Demo Time
             </Typography>
             <Box
+              component="a"
+              href="https://timeoff-navigator.vercel.app/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 1.5,
+                mt: 2,
+                mb: 4,
+                px: 4,
+                py: 2,
+                borderRadius: 3,
+                bgcolor: '#496BE3',
+                color: '#fff',
+                textDecoration: 'none',
+                fontWeight: 700,
+                fontSize: '1.25rem',
+                transition: 'all 0.2s',
+                boxShadow: '0 4px 20px rgba(73, 107, 227, 0.4)',
+                '&:hover': {
+                  bgcolor: '#3a5bc7',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 6px 24px rgba(73, 107, 227, 0.5)',
+                },
+              }}
+            >
+              Abrir TimeOff Navigator
+            </Box>
+            <Box
               sx={{
                 display: 'flex',
                 gap: 4,
                 justifyContent: 'center',
                 flexWrap: 'wrap',
-                mt: 6,
+                mt: 4,
               }}
             >
               {[
