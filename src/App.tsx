@@ -14,6 +14,7 @@ import Chat from './pages/Chat';
 import Laboratory from './pages/Laboratory';
 import LaboratoryCreate from './pages/LaboratoryCreate';
 import LaboratoryEdit from './pages/LaboratoryEdit';
+import Presentation from './pages/Presentation';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useAuth();
@@ -32,6 +33,7 @@ const PublicRoute = ({ children }: { children: React.ReactNode }) => {
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/presentation" element={<Presentation />} />
       <Route
         path="/login"
         element={
