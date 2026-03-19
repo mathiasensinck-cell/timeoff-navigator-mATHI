@@ -95,7 +95,7 @@ const Slide2Problemas = () => (
     >
       <Box
         component="img"
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PvzSPE6ybh7vEzptnshC6Td9bulG2e.png"
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-WwBm4CrPFqAFe7E33cAYdOxQa7tbo8.png"
         alt="Ejemplo de problema de soporte"
         crossOrigin="anonymous"
         sx={{
@@ -503,6 +503,20 @@ const Slide7Impacto = () => (
         Implementaciones mas rapidas, mas clientes activando el modulo, menos churn. <br />
         <span style={{ color: '#1CA332' }}>Una palanca directa de revenue para Humand.</span>
       </Typography>
+    </Box>
+    <Box sx={{ mt: 2, display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <Typography variant="body2" color="text.secondary">
+        Construido con:
+      </Typography>
+      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+        Claude Code
+      </Box>
+      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+        Vercel
+      </Box>
+      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+        API de Claude
+      </Box>
     </Box>
   </Box>
 );
