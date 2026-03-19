@@ -88,35 +88,19 @@ const Slide2Problemas = () => (
     </Typography>
     <Box
       sx={{
-        position: 'relative',
         maxWidth: 900,
         width: '100%',
       }}
     >
       <Box
         component="img"
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-WwBm4CrPFqAFe7E33cAYdOxQa7tbo8.png"
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_q466uoq466uoq466%20%281%29.png-NtLkLYkNM6athM5MKP9INusIeO6SmP.jpeg"
         alt="Ejemplo de problema de soporte"
         crossOrigin="anonymous"
         sx={{
           width: '100%',
           borderRadius: 3,
           boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
-          filter: 'blur(2px)',
-          opacity: 0.85,
-        }}
-      />
-      {/* Overlay para ocultar el nombre */}
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '8%',
-          left: '3%',
-          width: '120px',
-          height: '30px',
-          bgcolor: 'rgba(255,255,255,0.95)',
-          borderRadius: 1,
-          filter: 'blur(0px)',
         }}
       />
     </Box>
@@ -504,20 +488,6 @@ const Slide7Impacto = () => (
         <span style={{ color: '#1CA332' }}>Una palanca directa de revenue para Humand.</span>
       </Typography>
     </Box>
-    <Box sx={{ mt: 2, display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-      <Typography variant="body2" color="text.secondary">
-        Construido con:
-      </Typography>
-      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
-        Claude Code
-      </Box>
-      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
-        Vercel
-      </Box>
-      <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
-        API de Claude
-      </Box>
-    </Box>
   </Box>
 );
 
@@ -535,11 +505,25 @@ const Slide8Cierre = () => (
   >
     <Box sx={{ textAlign: 'center', maxWidth: 700 }}>
       <Typography variant="h5" sx={{ color: 'text.secondary', mb: 2 }}>
-        Construimos esto en 2 dias con Claude Code, la API de Claude y React.
+        Construimos esto en 2 dias.
       </Typography>
       <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary' }}>
         No es un mockup — es un producto funcional listo para el roadmap de Humand.
       </Typography>
+      <Box sx={{ mt: 3, display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <Typography variant="body2" color="text.secondary">
+          Construido con:
+        </Typography>
+        <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+          Claude Code
+        </Box>
+        <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+          Vercel
+        </Box>
+        <Box sx={{ px: 2, py: 1, borderRadius: 2, bgcolor: 'rgba(0,0,0,0.05)', fontWeight: 600, color: 'text.primary' }}>
+          API de Claude
+        </Box>
+      </Box>
     </Box>
     <Typography
       variant="h1"
