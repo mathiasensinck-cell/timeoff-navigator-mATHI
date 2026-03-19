@@ -372,6 +372,32 @@ const Slide4Demo = () => (
         </Box>
       ))}
     </Box>
+    <Box
+      component="a"
+      href="https://timeoff-navigator.vercel.app/login"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        mt: 4,
+        px: 4,
+        py: 2,
+        borderRadius: 2,
+        bgcolor: 'primary.main',
+        color: 'white',
+        textDecoration: 'none',
+        fontWeight: 600,
+        fontSize: '1.1rem',
+        boxShadow: '0 4px 20px rgba(73, 107, 227, 0.4)',
+        transition: 'all 0.2s ease',
+        '&:hover': {
+          bgcolor: 'primary.dark',
+          transform: 'translateY(-2px)',
+          boxShadow: '0 6px 25px rgba(73, 107, 227, 0.5)',
+        },
+      }}
+    >
+      Ir a la App
+    </Box>
   </Box>
 );
 
