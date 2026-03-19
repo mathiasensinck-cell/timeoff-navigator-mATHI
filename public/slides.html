@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JaguAir - Presentacion</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fff; overflow: hidden; }
+    .slide { display: none; min-height: 100vh; padding: 40px; align-items: center; justify-content: center; flex-direction: column; }
+    .slide.active { display: flex; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 40px; }
+    .member { text-align: center; }
+    .member img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #496BE3; }
+    .member h3 { margin-top: 16px; font-size: 1.1rem; color: #fff; }
+    .member p { color: #888; font-size: 0.9rem; }
+    .title { font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, #496BE3, #886BFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .subtitle { color: #888; font-size: 1.2rem; margin-top: 8px; letter-spacing: 4px; }
+    h2 { font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
+    .problems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; }
+    .problem { background: #151515; border: 1px solid #252525; border-radius: 12px; padding: 24px; }
+    .problem h4 { color: #F0B623; margin-bottom: 8px; }
+    .problem p { color: #aaa; font-size: 0.95rem; line-height: 1.5; }
+    .solutions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; }
+    .solution { background: #151515; border-radius: 12px; padding: 24px; border-left: 4px solid; }
+    .solution.blue { border-color: #496BE3; }
+    .solution.purple { border-color: #886BFF; }
+    .solution.yellow { border-color: #F0B623; }
+    .solution.green { border-color: #1CA332; }
+    .solution h4 { margin-bottom: 8px; }
+    .solution p { color: #aaa; font-size: 0.9rem; }
+    .demo-btn { display: inline-block; margin-top: 40px; padding: 16px 40px; background: #496BE3; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.2rem; transition: all 0.2s; }
+    .demo-btn:hover { background: #3a5bc7; transform: translateY(-2px); }
+    .nav { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #333; cursor: pointer; transition: all 0.2s; }
+    .dot.active { background: #496BE3; }
+    .arrows { position: fixed; bottom: 30px; right: 30px; display: flex; gap: 12px; }
+    .arrow { width: 44px; height: 44px; border-radius: 50%; background: #1a1a1a; border: 1px solid #333; color: #fff; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
+    .arrow:hover { background: #252525; }
+    @media (max-width: 768px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .problems, .solutions { grid-template-columns: 1fr; }
+      .title { font-size: 2.5rem; }
+      h2 { font-size: 1.8rem; }
+      .member img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slide 1: Team -->
+  <div class="slide active">
+    <h1 class="title">JaguAir</h1>
+    <p class="subtitle">TIME OFF NAVIGATOR</p>
+    <div class="team-grid">
+      <div class="member">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/guille%20foto-GkSMlXU30P0RUKAaqsby5xXgfvbMbr.png" alt="Guillermo">
+        <h3>Guillermo Sequeira</h3>
+      </div>
+      <div class="member">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mATHI%20FOTO-eMEblVvxFr0hPaH6louPRmBk4mAAKd.jpeg" alt="Matias">
+        <h3>Matias Ensinck</h3>
+      </div>
+      <div class="member">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emi%20foto-UNwPptdf6cfB00QLQNq5ib3ol6VaGa.png" alt="Emilia">
+        <h3>Emilia Wittenstein</h3>
+      </div>
+      <div class="member">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Luchi%20foto-PsfXzLUoIP9gXAr7tdWir1RKnMcUck.png" alt="Luciano">
+        <h3>Luciano Lucero</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: Problem -->
+  <div class="slide">
+    <h2>El Problema</h2>
+    <div class="problems">
+      <div class="problem">
+        <h4>Alto volumen de requests</h4>
+        <p>El modulo de Time Off genera muchas consultas de soporte e implementacion.</p>
+      </div>
+      <div class="problem">
+        <h4>Configuracion compleja</h4>
+        <p>Las politicas iniciales son dificiles de entender y configurar correctamente.</p>
+      </div>
+      <div class="problem">
+        <h4>Falta de visibilidad</h4>
+        <p>No hay forma clara de ver el historial de movimientos y saldos de un usuario.</p>
+      </div>
+      <div class="problem">
+        <h4>Miedo a romper</h4>
+        <p>Modificar politicas activas puede generar errores sin forma de previsualizar.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Solution -->
+  <div class="slide">
+    <h2>Nuestra Solucion</h2>
+    <div class="solutions">
+      <div class="solution blue">
+        <h4>Gestor de Politicas con IA</h4>
+        <p>Templates y asistente inteligente para configurar politicas facilmente.</p>
+      </div>
+      <div class="solution purple">
+        <h4>Registro de Movimientos</h4>
+        <p>Timeline completo de acreditaciones, consumos y expiraciones por usuario.</p>
+      </div>
+      <div class="solution yellow">
+        <h4>Auditoria de Saldos</h4>
+        <p>Reportes exportables diferenciados por ano para el admin.</p>
+      </div>
+      <div class="solution green">
+        <h4>Sandbox de Simulacion</h4>
+        <p>Prever el impacto de cambios antes de aplicarlos en produccion.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Demo -->
+  <div class="slide">
+    <h2>Demo Time</h2>
+    <p style="color:#888; margin-bottom: 20px;">Veamos la aplicacion en accion</p>
+    <a href="https://timeoff-navigator.vercel.app/login" target="_blank" class="demo-btn">Abrir TimeOff Navigator</a>
+  </div>
+
+  <div class="nav">
+    <div class="dot active" onclick="goTo(0)"></div>
+    <div class="dot" onclick="goTo(1)"></div>
+    <div class="dot" onclick="goTo(2)"></div>
+    <div class="dot" onclick="goTo(3)"></div>
+  </div>
+
+  <div class="arrows">
+    <button class="arrow" onclick="prev()">&#8592;</button>
+    <button class="arrow" onclick="next()">&#8594;</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    
+    function next() { goTo((current + 1) % slides.length); }
+    function prev() { goTo((current - 1 + slides.length) % slides.length); }
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+    });
+  </script>
+</body>
+</html>
