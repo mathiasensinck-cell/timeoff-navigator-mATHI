@@ -48,7 +48,7 @@ const Slide1Gancho = () => (
   >
     <Box
       component="img"
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_psp1icpsp1icpsp1.png-zvIxtXeeICNFp7xvPrjmM5seoRhIog.jpeg"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_urm244urm244urm2.png-7f8CncIsdKzf6Z4W5Lh8kJIrh37Gcn.jpeg"
       alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
       crossOrigin="anonymous"
       sx={{
@@ -590,7 +590,7 @@ const Slide8Cierre = () => (
   </Box>
 );
 
-const slides = [Slide1Gancho, Slide2Problemas, Slide3Negocio, Slide4Problema, Slide5Solucion, Slide7Impacto, Slide8Cierre, Slide6Demo];
+const slides = [Slide1Gancho, Slide2Problemas, Slide3Negocio, Slide4Problema, Slide5Solucion, Slide6Demo, Slide7Impacto, Slide8Cierre];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
