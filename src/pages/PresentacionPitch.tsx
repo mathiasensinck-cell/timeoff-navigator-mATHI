@@ -52,8 +52,8 @@ const Slide1Gancho = () => (
       alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
       crossOrigin="anonymous"
       sx={{
-        maxWidth: '85%',
-        maxHeight: '70vh',
+        maxWidth: '70%',
+        maxHeight: '60vh',
         borderRadius: 3,
         boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
         objectFit: 'contain',
@@ -257,10 +257,10 @@ const Slide4Problema = () => (
     </Box>
     <Box sx={{ maxWidth: 800, display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
       <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
-        Hoy, el admin no tiene guia de buenas practicas. No puede simular que va a pasar antes de aplicar. Y cuando algo falla, no hay forma simple de entender que paso.
+        Hoy el admin puede hacer todo esto en el modulo, la funcionalidad esta. Pero le falta un acompanamiento inteligente: una guia que le diga cuales son las mejores practicas, la posibilidad de simular un cambio antes de aplicarlo, y una forma clara de entender que paso cuando algo no cuadra.
       </Typography>
-      <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 600, color: '#E74444' }}>
-        Admins con miedo de tocar la configuracion. Equipos de CX saturados. Implementaciones que se estiran.
+      <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 600, color: '#1CA332' }}>
+        Lo que construimos viene a potenciar lo que el modulo ya hace bien, con una capa de inteligencia que lo hace mas accesible.
       </Typography>
     </Box>
   </Box>
@@ -314,8 +314,11 @@ const Slide5Solucion = () => (
         textAlign: 'center',
       }}
     >
-      <Typography variant="h5" sx={{ color: 'text.primary', lineHeight: 1.6 }}>
-        Un <strong>copiloto de IA</strong> que permite a cualquier admin entender, configurar y auditar sus politicas de vacaciones — <strong>sin depender de soporte</strong>, y <strong>sin miedo a romper nada</strong>.
+      <Typography variant="h5" sx={{ color: 'text.primary', lineHeight: 1.6, mb: 2 }}>
+        Un <strong>copiloto de IA</strong> que acompana al admin en todo el ciclo — desde disenar una politica nueva, hasta probarla, entenderla y auditarla.
+      </Typography>
+      <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+        Simula distintos escenarios y muestra como va a impactar cada configuracion en los saldos reales. Cuando el admin necesita entender que paso, le explica la logica detras de cada resultado. Y ademas, le da visibilidad con metricas y tendencias generales del modulo.
       </Typography>
     </Box>
   </Box>
@@ -362,7 +365,7 @@ const Slide6Demo = () => (
         </Box>
         <Box>
           <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Home</Typography>
-          <Typography variant="body2" color="text.secondary">Centro de control: politicas activas, empleados, acceso directo a cada herramienta.</Typography>
+          <Typography variant="body2" color="text.secondary">Comunidad conectada, politicas configuradas, acceso directo a cada herramienta. Todo centralizado.</Typography>
         </Box>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(136, 107, 255, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
@@ -370,8 +373,8 @@ const Slide6Demo = () => (
           <LabIcon sx={{ color: '#886BFF' }} />
         </Box>
         <Box>
-          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Laboratory</Typography>
-          <Typography variant="body2" color="text.secondary">Donde pasa la magia. Simulas primero, aplicas despues. El copiloto sugiere y explica por que.</Typography>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Gestor de Politicas</Typography>
+          <Typography variant="body2" color="text.secondary">El corazon de la herramienta. Crea o edita politicas con el copiloto paso a paso. Simula el impacto antes de aplicar.</Typography>
         </Box>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(240, 182, 35, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
@@ -379,8 +382,8 @@ const Slide6Demo = () => (
           <EventLogIcon sx={{ color: '#F0B623' }} />
         </Box>
         <Box>
-          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Event Log</Typography>
-          <Typography variant="body2" color="text.secondary">Linea del tiempo completa: acreditaciones, consumos, vencimientos. Todo trazable.</Typography>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Registro y Auditoria</Typography>
+          <Typography variant="body2" color="text.secondary">Detalle completo de cada colaborador: acreditaciones, consumos, vencimientos. Reportes por ano y politica.</Typography>
         </Box>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(231, 68, 68, 0.08)', display: 'flex', gap: 2, alignItems: 'flex-start' }}>
@@ -388,8 +391,8 @@ const Slide6Demo = () => (
           <ChatIcon sx={{ color: '#E74444' }} />
         </Box>
         <Box>
-          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Chat</Typography>
-          <Typography variant="body2" color="text.secondary">Agente de IA con toda la logica del modulo. Un experto de CX disponible 24/7.</Typography>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>Agente de IA</Typography>
+          <Typography variant="body2" color="text.secondary">Pregunta lo que necesites sobre configuracion, legislacion o saldos. Un experto de CX disponible 24/7.</Typography>
         </Box>
       </Box>
     </Box>
@@ -462,7 +465,7 @@ const Slide7Impacto = () => (
           Tiempo de implementacion comprimido
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Lo que hoy toma dias de ida y vuelta con CX, aca se hace en minutos. Mas clientes van a querer activar el modulo.
+          Lo que hoy toma dias de ida y vuelta con CX, aca se resuelve en minutos. Cuando implementar es mas facil, mas clientes van a querer activar el modulo.
         </Typography>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(28, 163, 50, 0.08)', borderLeft: '4px solid #1CA332' }}>
@@ -470,22 +473,22 @@ const Slide7Impacto = () => (
           Equipo de CX liberado
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Las consultas repetitivas las absorbe el copiloto. El equipo humano se enfoca en lo que realmente necesita expertise.
+          Las consultas repetitivas las absorbe el copiloto. El equipo humano se enfoca en lo que realmente necesita su expertise.
         </Typography>
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(240, 182, 35, 0.08)', borderLeft: '4px solid #F0B623' }}>
         <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
-          Friccion eliminada donde mas duele
+          Protegemos el modulo donde mas importa
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Simular antes de aplicar = cero errores inesperados. Menos tickets, menos urgencias, clientes mas felices.
+          Simular antes de aplicar significa cero errores inesperados, menos tickets, menos urgencias, y clientes mas felices con la herramienta que mas valoran.
         </Typography>
       </Box>
     </Box>
     <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'background.paper', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', maxWidth: 700, textAlign: 'center' }}>
       <Typography variant="body1" sx={{ fontWeight: 600, color: 'text.primary' }}>
-        Implementaciones mas rapidas, mas clientes activando el modulo, menos churn. <br />
-        <span style={{ color: '#1CA332' }}>Una palanca directa de revenue para Humand.</span>
+        Implementaciones mas rapidas, mas clientes activando el modulo, menos churn en los que ya lo usan. <br />
+        <span style={{ color: '#1CA332' }}>TimeOff Navigator es una palanca directa de revenue para Humand.</span>
       </Typography>
     </Box>
   </Box>
@@ -537,7 +540,7 @@ const Slide8Cierre = () => (
         textAlign: 'center',
       }}
     >
-      JaguAir
+      Somos JaguAir
     </Typography>
     <Box
       sx={{
