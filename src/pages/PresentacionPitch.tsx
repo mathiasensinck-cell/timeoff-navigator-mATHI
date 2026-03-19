@@ -48,7 +48,7 @@ const Slide1Gancho = () => (
   >
     <Box
       component="img"
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_xz13bexz13bexz13.png-kmXWIPKvFM0VGmXlcJwEuWAs6FDC2i.jpeg"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_psp1icpsp1icpsp1.png-zvIxtXeeICNFp7xvPrjmM5seoRhIog.jpeg"
       alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
       crossOrigin="anonymous"
       sx={{
