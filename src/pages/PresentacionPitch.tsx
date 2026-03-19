@@ -62,8 +62,80 @@ const Slide1Gancho = () => (
   </Box>
 );
 
-// Slide 2: Por que importa para el negocio
-const Slide2Negocio = () => (
+// Slide 2: Hay problemas como estos (imagen difuminada)
+const Slide2Problemas = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 4,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '1.8rem', md: '2.5rem' },
+        fontWeight: 700,
+        color: '#E74444',
+        textAlign: 'center',
+      }}
+    >
+      Hay problemas como estos...
+    </Typography>
+    <Box
+      sx={{
+        position: 'relative',
+        maxWidth: 900,
+        width: '100%',
+      }}
+    >
+      <Box
+        component="img"
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PvzSPE6ybh7vEzptnshC6Td9bulG2e.png"
+        alt="Ejemplo de problema de soporte"
+        crossOrigin="anonymous"
+        sx={{
+          width: '100%',
+          borderRadius: 3,
+          boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
+          filter: 'blur(2px)',
+          opacity: 0.85,
+        }}
+      />
+      {/* Overlay para ocultar el nombre */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '8%',
+          left: '3%',
+          width: '120px',
+          height: '30px',
+          bgcolor: 'rgba(255,255,255,0.95)',
+          borderRadius: 1,
+          filter: 'blur(0px)',
+        }}
+      />
+    </Box>
+    <Typography
+      variant="body1"
+      sx={{
+        color: 'text.secondary',
+        textAlign: 'center',
+        maxWidth: 600,
+        fontStyle: 'italic',
+      }}
+    >
+      Consultas que saturan al equipo de CX y que podrian resolverse con las herramientas correctas.
+    </Typography>
+  </Box>
+);
+
+// Slide 3: Por que importa para el negocio
+const Slide3Negocio = () => (
   <Box
     sx={{
       height: '100%',
@@ -143,8 +215,8 @@ const Slide2Negocio = () => (
   </Box>
 );
 
-// Slide 3: El Problema
-const Slide3Problema = () => (
+// Slide 4: El Problema
+const Slide4Problema = () => (
   <Box
     sx={{
       height: '100%',
@@ -210,8 +282,8 @@ const Slide3Problema = () => (
   </Box>
 );
 
-// Slide 4: La Solucion
-const Slide4Solucion = () => (
+// Slide 5: La Solucion
+const Slide5Solucion = () => (
   <Box
     sx={{
       height: '100%',
@@ -265,8 +337,8 @@ const Slide4Solucion = () => (
   </Box>
 );
 
-// Slide 5: Demo
-const Slide5Demo = () => (
+// Slide 6: Demo
+const Slide6Demo = () => (
   <Box
     sx={{
       height: '100%',
@@ -366,8 +438,8 @@ const Slide5Demo = () => (
   </Box>
 );
 
-// Slide 6: El Impacto
-const Slide6Impacto = () => (
+// Slide 7: El Impacto
+const Slide7Impacto = () => (
   <Box
     sx={{
       height: '100%',
@@ -435,8 +507,8 @@ const Slide6Impacto = () => (
   </Box>
 );
 
-// Slide 7: Cierre y Equipo
-const Slide7Cierre = () => (
+// Slide 8: Cierre y Equipo
+const Slide8Cierre = () => (
   <Box
     sx={{
       height: '100%',
@@ -520,7 +592,7 @@ const Slide7Cierre = () => (
   </Box>
 );
 
-const slides = [Slide1Gancho, Slide2Negocio, Slide3Problema, Slide4Solucion, Slide6Impacto, Slide7Cierre, Slide5Demo];
+const slides = [Slide1Gancho, Slide2Problemas, Slide3Negocio, Slide4Problema, Slide5Solucion, Slide7Impacto, Slide8Cierre, Slide6Demo];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
