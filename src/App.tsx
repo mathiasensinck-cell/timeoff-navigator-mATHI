@@ -33,7 +33,6 @@ const PublicRoute = ({ children }: { children: React.ReactNode }) => {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/presentation" element={<Presentation />} />
       <Route
         path="/login"
         element={
@@ -70,9 +69,17 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <AuthProvider>
-          <AppRoutes />
-        </AuthProvider>
+        <Routes>
+          <Route path="/presentation" element={<Presentation />} />
+          <Route
+            path="*"
+            element={
+              <AuthProvider>
+                <AppRoutes />
+              </AuthProvider>
+            }
+          />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );
