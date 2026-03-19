@@ -445,7 +445,7 @@ const Slide5Impact = () => (
         }}
       >
         <Typography variant="h2" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>
-          -60%
+          -30%
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Reduccion en tickets de soporte relacionados a TimeOff
@@ -461,7 +461,7 @@ const Slide5Impact = () => (
         }}
       >
         <Typography variant="h2" sx={{ fontWeight: 700, color: '#496BE3', mb: 1 }}>
-          +80%
+          +40%
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Autonomia de los clientes en configuracion de politicas
@@ -477,7 +477,7 @@ const Slide5Impact = () => (
         }}
       >
         <Typography variant="h2" sx={{ fontWeight: 700, color: '#F0B623', mb: 1 }}>
-          3x
+          2x
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Mas rapido el onboarding de nuevos clientes
