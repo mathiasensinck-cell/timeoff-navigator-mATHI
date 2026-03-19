@@ -52,8 +52,8 @@ const Slide1Gancho = () => (
       alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
       crossOrigin="anonymous"
       sx={{
-        maxWidth: '100%',
-        maxHeight: '80vh',
+        maxWidth: '85%',
+        maxHeight: '70vh',
         borderRadius: 3,
         boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
         objectFit: 'contain',
