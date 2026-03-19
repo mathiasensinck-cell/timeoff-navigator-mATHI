@@ -34,54 +34,31 @@ const teamMembers = [
   },
 ];
 
-// Slide 1: Apertura - El Gancho
+// Slide 1: Apertura - El Gancho (Imagen)
 const Slide1Gancho = () => (
   <Box
     sx={{
       height: '100%',
+      width: '100%',
       display: 'flex',
-      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 4,
-      px: 3,
+      px: 2,
     }}
   >
-    <Typography
-      variant="h2"
-      sx={{
-        fontSize: { xs: '1.5rem', md: '2.2rem' },
-        fontWeight: 500,
-        color: 'text.secondary',
-        textAlign: 'center',
-        maxWidth: 900,
-        lineHeight: 1.6,
-        fontStyle: 'italic',
-      }}
-    >
-      "Un admin de RRHH en Colombia acaba de configurar mal la politica de vacaciones. No lo sabe todavia. Lo va a descubrir en 3 meses, cuando 200 empleados tengan saldos incorrectos y el equipo de soporte este apagando incendios que se podrian haber evitado."
-    </Typography>
     <Box
+      component="img"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_yzf2esyzf2esyzf2.png-cblOjyRbNWDAKabGTTVDG5qAFnVwne.jpeg"
+      alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
+      crossOrigin="anonymous"
       sx={{
-        mt: 4,
-        p: 4,
+        maxWidth: '100%',
+        maxHeight: '80vh',
         borderRadius: 3,
-        bgcolor: 'rgba(231, 68, 68, 0.08)',
-        border: '2px solid rgba(231, 68, 68, 0.3)',
-        maxWidth: 600,
+        boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
+        objectFit: 'contain',
       }}
-    >
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: 700,
-          color: '#E74444',
-          textAlign: 'center',
-        }}
-      >
-        Esto pasa. Pasa seguido. Y hoy no hay nada que lo prevenga.
-      </Typography>
-    </Box>
+    />
   </Box>
 );
 
