@@ -540,20 +540,10 @@ const Slide7Cierre = () => (
         </Box>
       ))}
     </Box>
-    <Typography
-      variant="h4"
-      sx={{
-        fontWeight: 600,
-        color: 'text.primary',
-        mt: 2,
-      }}
-    >
-      Gracias
-    </Typography>
   </Box>
 );
 
-const slides = [Slide1Gancho, Slide2Negocio, Slide3Problema, Slide4Solucion, Slide5Demo, Slide6Impacto, Slide7Cierre];
+const slides = [Slide1Gancho, Slide2Negocio, Slide3Problema, Slide4Solucion, Slide6Impacto, Slide7Cierre, Slide5Demo];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
