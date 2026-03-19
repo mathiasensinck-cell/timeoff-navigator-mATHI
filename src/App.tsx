@@ -14,6 +14,7 @@ import Chat from './pages/Chat';
 import Laboratory from './pages/Laboratory';
 import LaboratoryCreate from './pages/LaboratoryCreate';
 import LaboratoryEdit from './pages/LaboratoryEdit';
+import PresentacionPitch from './pages/PresentacionPitch';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useAuth();
@@ -32,6 +33,8 @@ const PublicRoute = ({ children }: { children: React.ReactNode }) => {
 function AppRoutes() {
   return (
     <Routes>
+      {/* Ruta pública independiente para la presentación pitch */}
+      <Route path="/presentacion-pitch" element={<PresentacionPitch />} />
       <Route
         path="/login"
         element={
