@@ -29,7 +29,7 @@ const teamMembers = [
     photo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emi%20foto-brnwvJKnSWNAJTWTllwtWZOh4iX9r3.png',
   },
   {
-    name: 'Luciano Lucero',
+    name: 'Luciana Lucero',
     photo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Luchi%20foto-ITOrP73YUgnwKcB5EcZwEtkcT90f1w.png',
   },
 ];
@@ -340,7 +340,7 @@ const Slide4Demo = () => (
         maxWidth: 600,
       }}
     >
-      Veamos TimeOff Navigator en acción
+      Veamos TimeOff Navigator en accion
     </Typography>
     <Box
       sx={{
@@ -351,7 +351,7 @@ const Slide4Demo = () => (
         justifyContent: 'center',
       }}
     >
-      {['Gestor de Políticas', 'Registro de Movimientos', 'Auditoría', 'Agente IA'].map((item, i) => (
+      {['Gestor de Politicas', 'Registro de Movimientos', 'Auditoria', 'Agente IA'].map((item, i) => (
         <Box
           key={item}
           sx={{
@@ -375,7 +375,112 @@ const Slide4Demo = () => (
   </Box>
 );
 
-const slides = [Slide1Team, Slide2Problem, Slide3Solution, Slide4Demo];
+const Slide5Impact = () => (
+  <Box
+    sx={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 5,
+      px: 3,
+    }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        fontSize: { xs: '2rem', md: '3rem' },
+        fontWeight: 700,
+        background: 'linear-gradient(135deg, #1CA332 0%, #2DA8A4 100%)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        textAlign: 'center',
+      }}
+    >
+      Impacto Esperado
+    </Typography>
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
+        gap: 4,
+        maxWidth: 1000,
+      }}
+    >
+      <Box
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          bgcolor: 'rgba(28, 163, 50, 0.08)',
+          textAlign: 'center',
+          border: '2px solid rgba(28, 163, 50, 0.2)',
+        }}
+      >
+        <Typography variant="h2" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>
+          -60%
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Reduccion en tickets de soporte relacionados a TimeOff
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          bgcolor: 'rgba(73, 107, 227, 0.08)',
+          textAlign: 'center',
+          border: '2px solid rgba(73, 107, 227, 0.2)',
+        }}
+      >
+        <Typography variant="h2" sx={{ fontWeight: 700, color: '#496BE3', mb: 1 }}>
+          +80%
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Autonomia de los clientes en configuracion de politicas
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          bgcolor: 'rgba(240, 182, 35, 0.08)',
+          textAlign: 'center',
+          border: '2px solid rgba(240, 182, 35, 0.2)',
+        }}
+      >
+        <Typography variant="h2" sx={{ fontWeight: 700, color: '#F0B623', mb: 1 }}>
+          3x
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Mas rapido el onboarding de nuevos clientes
+        </Typography>
+      </Box>
+    </Box>
+    <Box
+      sx={{
+        mt: 2,
+        p: 3,
+        borderRadius: 3,
+        bgcolor: 'background.paper',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        maxWidth: 700,
+        textAlign: 'center',
+      }}
+    >
+      <Typography variant="h5" sx={{ fontWeight: 600, mb: 1, color: 'text.primary' }}>
+        Beneficio clave
+      </Typography>
+      <Typography variant="body1" color="text.secondary">
+        TimeOff Navigator empodera a los administradores de RRHH para gestionar licencias de forma autonoma, 
+        reduciendo la dependencia de soporte tecnico y mejorando la experiencia del usuario final.
+      </Typography>
+    </Box>
+  </Box>
+);
+
+const slides = [Slide1Team, Slide2Problem, Slide3Solution, Slide4Demo, Slide5Impact];
 
 const PresentacionPitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
