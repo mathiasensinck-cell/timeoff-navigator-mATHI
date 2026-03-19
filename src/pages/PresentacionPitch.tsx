@@ -48,7 +48,7 @@ const Slide1Gancho = () => (
   >
     <Box
       component="img"
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_urm244urm244urm2.png-7f8CncIsdKzf6Z4W5Lh8kJIrh37Gcn.jpeg"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_gv2keogv2keogv2k.png-cwprKKK32uW3Z6eDSUOFlMohUBGBON.jpeg"
       alt="Admin de RRHH en Colombia con problema de configuracion de vacaciones"
       crossOrigin="anonymous"
       sx={{
@@ -252,7 +252,7 @@ const Slide4Problema = () => (
       </Box>
       <Box sx={{ p: 3, borderRadius: 3, bgcolor: 'rgba(28, 163, 50, 0.08)', textAlign: 'center' }}>
         <Typography variant="h6" sx={{ fontWeight: 700, color: '#1CA332', mb: 1 }}>Mexico</Typography>
-        <Typography variant="body2" color="text.secondary">Prima vacacional obligatoria</Typography>
+        <Typography variant="body2" color="text.secondary">Politicas diferentes</Typography>
       </Box>
     </Box>
     <Box sx={{ maxWidth: 800, display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
