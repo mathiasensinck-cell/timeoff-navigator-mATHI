@@ -14,6 +14,7 @@ import {
   Assessment as ReportsIcon,
   SmartToy as AiIcon,
   TuneRounded as PolicyIcon,
+  Slideshow as SlideshowIcon,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -130,6 +131,31 @@ const Home = () => {
           Bienvenido a <strong>TimeOff Navigator</strong> — tu herramienta para diseñar, simular
           y entender políticas de vacaciones y permisos.
         </Typography>
+        <Box
+          onClick={() => navigate('/presentation')}
+          sx={{
+            mt: 2,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 1,
+            px: 2,
+            py: 1,
+            borderRadius: 2,
+            bgcolor: '#496BE3',
+            color: 'white',
+            cursor: 'pointer',
+            transition: 'all 0.2s',
+            '&:hover': {
+              bgcolor: '#3a5bc7',
+              transform: 'translateY(-2px)',
+            },
+          }}
+        >
+          <SlideshowIcon fontSize="small" />
+          <Typography variant="body2" fontWeight={600}>
+            Ver Presentacion JaguAir
+          </Typography>
+        </Box>
       </Box>
 
       {/* Connection Status */}
